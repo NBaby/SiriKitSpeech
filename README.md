@@ -18,12 +18,12 @@
 ***
 ###准备工作
 要实现语音识别，就需要先给应用授权。在info.plist添加权限描述。
-![语音权限描述](/Users/panzihao/Desktop/经验案例图片/语音权限描述.png)
+![语音权限描述.png](https://upload-images.jianshu.io/upload_images/2368050-3bd70dcb3ae4459d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 然后需要添加speech框架头文件`#import <AVFoundation/AVFoundation.h>`和`#import <Speech/Speech.h>`
 
 接着是进入页面做好权限请求：
-![权限请求](/Users/panzihao/Desktop/经验案例图片/权限请求.png)
+![权限请求.png](https://upload-images.jianshu.io/upload_images/2368050-a4f9aab8ab92e69c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 做好这些就可以进行后续开发工作了。
 
@@ -32,7 +32,7 @@
 * **AVAudioSession**
 
 该类是录音的一些基本环境配置。
-![录音环境配置](/Users/panzihao/Desktop/经验案例图片/录音环境配置.png)
+![录音环境配置.png](https://upload-images.jianshu.io/upload_images/2368050-410cbea71e0f62d2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 `AVAudioSessionCategoryRecord` : 设置录音(要录制说的话)
 
@@ -53,19 +53,24 @@
 * **SFSpeechRecognizer**
 
 语音识别类，主要负责将传进去的语音识别出具体的文字，在使用前需要进行一些简单的配置：
-![SFSpeechRecognizer配置](/Users/panzihao/Desktop/经验案例图片/SFSpeechRecognizer配置.png)
+![SFSpeechRecognizer配置.png](https://upload-images.jianshu.io/upload_images/2368050-54975c64364e6cdd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 * **SFSpeechRecognitionTask**
 
 由 SFSpeechRecognizer根据SFSpeechAudioBufferRecognitionRequest生成任务，然后通过代理返回处理的进度。代理大概有以下回调，回调的时机都已经在注释里展示
 
-![代理回调](/Users/panzihao/Desktop/经验案例图片/代理回调.png)
+![代理回调.png](https://upload-images.jianshu.io/upload_images/2368050-d6d3c4e9dff2c4d4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ###实现即时语音转文字功能
 有了上面的铺垫，就可以很容易实现一个即时语音转文字功能，大致流程如下：
 
-![流程图](/Users/panzihao/Desktop/经验案例图片/流程图.png)
+![流程图.png](https://upload-images.jianshu.io/upload_images/2368050-e15b1b8ccb6336ff.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ###Show Me The Code
 
 [demo地址](https://github.com/NBaby/SiriKitSpeech)
+
+##总结
+总体来说，语音识别率还是比较高的，而且性能给常强cpu也只用1%左右，并且可以离线使用。
+
+
