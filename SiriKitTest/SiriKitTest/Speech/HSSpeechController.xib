@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HSSpeechController">
+            <connections>
+                <outlet property="textLabel" destination="Oh8-eZ-B7J" id="ydn-uy-u4L"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="这里是识别内容" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oh8-eZ-B7J">
+                    <rect key="frame" x="20" y="107" width="374" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMA-rx-dt1">
+                    <rect key="frame" x="176" y="438" width="62" height="30"/>
+                    <state key="normal" title="按住说话"/>
+                    <connections>
+                        <action selector="speechDidFinish:" destination="-1" eventType="touchUpInside" id="naI-zw-pxu"/>
+                        <action selector="speechDidFinish:" destination="-1" eventType="touchUpOutside" id="tAd-ZG-iCh"/>
+                        <action selector="tapSpeechBtn:" destination="-1" eventType="touchDown" id="fJm-zL-YiM"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="TMA-rx-dt1" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="2S4-fH-goB"/>
+                <constraint firstItem="Oh8-eZ-B7J" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="63" id="BZW-9w-hNW"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="Oh8-eZ-B7J" secondAttribute="trailing" constant="20" id="BuK-eD-VNQ"/>
+                <constraint firstItem="TMA-rx-dt1" firstAttribute="centerY" secondItem="Q5M-cg-NOt" secondAttribute="centerY" id="IHG-ki-bDy"/>
+                <constraint firstItem="Oh8-eZ-B7J" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="xWI-OP-YZ2"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="47.826086956521742" y="35.491071428571423"/>
+        </view>
+    </objects>
+</document>
